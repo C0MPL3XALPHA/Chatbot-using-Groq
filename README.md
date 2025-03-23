@@ -30,18 +30,7 @@ client = groq.Client(api_key="YOUR_API_KEY")
 ```
 2. Run the chatbot:
 ```bash
-python app.py
-```
-
-## 📋 Example
-```python
-response = client.chat.completions.create(
-    model="mixtral-8x7b-32768",
-    messages=[{"role": "user", "content": "Hello!"}],
-    stream=True
-)
-for chunk in response:
-    print(chunk.choices[0].delta.content, end="")
+streamlit run app.py
 ```
 
 ## 🤝 Contributing
